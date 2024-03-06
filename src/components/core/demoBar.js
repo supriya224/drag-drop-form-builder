@@ -73,8 +73,7 @@ export default class Demobar extends React.Component {
     }
 
     return (
-      <div className="clearfix" >
-        {/* <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" style={{ marginRight: '10px' }} onClick={this.showPreview.bind(this)}>Preview Form</button> */}
+      <div className="clearfix px-9  mx-9 bg-slate-400" >
         <Button variant='default' className='mt-4 pt-4' type='submit' onClick={this.showPreview.bind(this)}>Preview Form</Button>
         { this.state.previewVisible &&
           <div className={modalClass} role="dialog">
@@ -157,7 +156,7 @@ export default class Demobar extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
+          </div>  
         }
       </div>
     );

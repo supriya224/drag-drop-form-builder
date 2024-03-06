@@ -1,6 +1,4 @@
 import Dragger from "@/components/core/Dragger/Dragger";
-
-
 const url = "/api/formdata";
 const saveUrl = "/api/formdata";
 
