@@ -73,12 +73,12 @@ export default class Demobar extends React.Component {
     }
 
     return (
-      <div className="clearfix px-9  mx-9 bg-slate-400" >
-        <Button variant='default' className='mt-4 pt-4' type='submit' onClick={this.showPreview.bind(this)}>Preview Form</Button>
+      <div className="clearfix " >
+        <Button variant='default' className='mt-9 ml-24' type='submit' onClick={this.showPreview.bind(this)}>Preview Form</Button>
         { this.state.previewVisible &&
           <div className={modalClass} role="dialog">
             <div className="modal-dialog modal-lg" role="document">
-              <div className="modal-content">
+              <div className=" flex justify-center">
                 <ReactFormGenerator
                   download_path=""
                   back_action="/"
@@ -91,18 +91,15 @@ export default class Demobar extends React.Component {
                   variables={this.props.variables}
                   data={this.state.data}
                   submitButton={
-                    <Button variant='outline' type='submit'>Submit</Button>
-                  // <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
+                    <Button variant='outline' size='default' type='submit' onSubmit={this._onSubmit}>Submit</Button>
                 }
                   backButton={
                     <Button variant='outline' type='submit'>Back</Button>
-                  // <button type="submit" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Back</button>
                 }
                   />
 
-                <div className="modal-footer">
-                <Button variant="outline">x</Button>
-                  {/* <button type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" data-dismiss="modal" onClick={this.closePreview.bind(this)}>X</button> */}
+                <div className="mt-3">
+                <Button variant="outline" size='gap' >x</Button>
                 </div>
               </div>
             </div>
