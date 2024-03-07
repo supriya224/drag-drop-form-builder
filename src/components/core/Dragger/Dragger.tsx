@@ -11,22 +11,29 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {  CalendarIcon } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
-// import { RadioGroupItem } from "@radix-ui/react-radio-group";
-// import { RadioGroup } from "@radix-ui/react-radio-group";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
-// import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Switch } from "@/components/ui/switch";
 import { Progress } from "@/components/ui/progress";
 
-const Hell = (props: any) => {
-  // for input deisgn import from shadcn ui
-  console.log("props", props);
-  return <Input name={props.name} {...props.data} />;
-};
+
+interface ToolbarItem {
+  key: string;
+  name: string;
+  icon: string;
+  static: boolean;
+  content?: string;
+  element?: string;
+  component?: React.ComponentType<any>;
+  type?: string;
+  forwardRef?: boolean;
+  field_name?: string;
+  props?: any;
+  label?: string;
+}
 
 // for Textarea deisgn import from shadcn ui
 const MyText = (props: any) => {
@@ -131,7 +138,7 @@ Registry.register("Button", Button as any);
 
 
 
-var items = [
+var toolbarItems: ToolbarItem[] | undefined=[
   {
     key: "Header",
     name: "Header Text",
@@ -216,6 +223,7 @@ var items = [
     key: "Image",
     name: "Image",
     static: true,
+    icon:"fa-solid fa-image",
   },
   {
     key: "DateTime",
@@ -283,7 +291,8 @@ const Dragger = () => {
           <Demobar variables={JOHN} />,
         </div>
         <div className="w-full mr-2 ">
-          <ReactFormBuilder toolbarItems={items} />
+          {/* Pass toolbarItems to ReactFormBuilder */}
+          <ReactFormBuilder toolbarItems={toolbarItems} />
         </div>
       </div>
     );
