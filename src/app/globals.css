@@ -111,3 +111,6 @@
 label {
   font-size: 15px;
 }
+.flex .justify-center{
+margin-left: 4rem;
+}
