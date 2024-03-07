@@ -11,7 +11,7 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
+Technology(Next with Typescript, shadcn UI, Tailwind, {pnpm})
 
 ## snapshot 
 <img width="1440" alt="Screenshot 2024-03-07 at 9 34 38 PM" src="https://github.com/supriya224/drag-drop-form-builder/assets/52038704/88d982f8-6722-4c6e-a447-820b3808561e">
