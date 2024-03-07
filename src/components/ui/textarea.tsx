@@ -6,7 +6,7 @@ export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className,placeholder, ...props }, ref) => {
+  ({ className, placeholder, ...props }, ref) => {
     return (
       <textarea
         placeholder={placeholder}
