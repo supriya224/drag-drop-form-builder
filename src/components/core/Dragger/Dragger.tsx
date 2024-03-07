@@ -66,25 +66,14 @@ const DateTime = (props: any) => {
 
 
 // for Radio deisgn import from shadcn ui
-const MyRadio = (props: any, ref: any) => {
-  // const { name, value } = props;
-  return (
-    <RadioGroup defaultValue="comfortable">
-    <div className="flex items-center space-x-2">
-      <RadioGroupItem value="default" id="r1" />
-      <label htmlFor="r1">Default</label>
-    </div>
-    <div className="flex items-center space-x-2">
-      <RadioGroupItem value="comfortable" id="r2" />
-      <label htmlFor="r2">Comfortable</label>
-    </div>
-    <div className="flex items-center space-x-2">
-      <RadioGroupItem value="compact" id="r3" />
-      <label htmlFor="r3">Compact</label>
-    </div>
-  </RadioGroup>
-  );
-};
+// const MyRadio = (props: any, ref: any) => {
+//   const { name, value,defaultValue } = props;
+//   return (
+//     <RadioGroup ref={ref} defaultValue={defaultValue} name={props.name} {...props.data}>
+//       <RadioGroupItem ref={ref} value={value} name={props.name} {...props.data} />
+//   </RadioGroup>
+//   );
+// };
 
 // for input deisgn import from shadcn ui
 const MyInput = React.forwardRef((props: any, ref: any) => {
@@ -102,7 +91,7 @@ const MyInput = React.forwardRef((props: any, ref: any) => {
 Registry.register("TestComponent", MyInput as any);
 Registry.register("Test", MyText as any);
 Registry.register("Date", DateTime as any);
-Registry.register("Radio", MyRadio as any);
+// Registry.register("Radio", MyRadio as any);
 
 var items = [
   {
@@ -122,11 +111,14 @@ var items = [
    {
     key: "RadioButtons",
     name: "Multiple Choice",
-    // component: MyRadio,
     static: true,
     icon: "fa fa-circle-dot",
     forwardRef: true,
     content: "Placeholder Text...",
+    type: "custom",
+    field_name: "Radio",
+    props: { test: "test_input" },
+    label: "Multiple choice",
   },
   {
     key: "Image",
