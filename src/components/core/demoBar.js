@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { ReactFormGenerator, ElementStore } from "react-form-builder2";
 import { Button } from "../ui/button";

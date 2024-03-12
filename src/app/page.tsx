@@ -1,11 +1,11 @@
-import Dragger from "@/components/core/Dragger/Dragger";
+import MyDragger from "@/components/DraggerComponent/MyDragger";
 
 
 export default function Home() {
   return (
     <>
       <main className="w-full">
-        <Dragger/>
+      <MyDragger/>
       </main>
     </>
   );

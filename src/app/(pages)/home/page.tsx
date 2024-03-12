@@ -1,4 +1,7 @@
-import Dragger from "@/components/core/Dragger/Dragger";
+'use client';
+
+import MyDragger from "@/components/DraggerComponent/MyDragger";
+
 const url = "/api/formdata";
 const saveUrl = "/api/formdata";
 
@@ -6,7 +9,7 @@ export default function Home() {
   return (
     <>
       <main className="w-full">
-            <Dragger />
+        <MyDragger />
       </main>
     </>
   );
