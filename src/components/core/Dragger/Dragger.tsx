@@ -1,5 +1,3 @@
-"use client";
-
 
 /* eslint-disable react/display-name */
 // eslint-disable-next-line react/display-name
@@ -257,9 +255,6 @@ var toolbarItems: ToolBarList[] | undefined=[
     static: false,
     label: "TextArea",
   },
-
- 
- 
 ];
 
 const Dragger = () => {
